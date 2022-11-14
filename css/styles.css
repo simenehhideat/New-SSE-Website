@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+img{
+	display: block;
+}
+.caption{
+	position: absolute;
+	left: -10000px;
+}
+
+body{
+	font-family: 'Ubuntu', sans-serif;
+	min-height: 100vh;
+	background-color: aliceblue;
+	display: grid;
+	grid-template-areas: 
+	"header header header"
+	"nav nav nav"
+	"main main main";
+	grid-template-rows: 200px 50px 1fr;	
+}
+
+footer{
+	border: 1px red solid;
+}
+
+header{
+	grid-area: header;
+	padding: 10px;
+	background-color: aliceblue;
+	background-image: linear-gradient(hsla(207, 44%, 49%, 0.324),hsla(0, 0%, 100%, 0.324)),url(../images/computer.jpg);
+	background-size: cover;
+	background-position: center;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 40px;
+	box-shadow: 0 0 15px 0 #000;
+}
+
+
+.logoContainer{
+	width: 10%;
+}
+.logoContainer img{
+	width: 100%;
+	height: auto;
+	min-width: 100px;
+	border-radius: 50%;
+	border: 2px solid goldenrod;
+	opacity: 50%;
+}
+
+header h1{
+	font-size: 2rem;
+	color: aliceblue;
+	text-shadow: 2px 2px 5px #000;
+}
+
+/*-----------------------------------------------Navigation-------------------------------------*/
+
+nav{
+	grid-area: nav;
+	position: relative;
+	background-color: #112B3C;
+}
+
+.navigation{
+	position: absolute;
+	top: 10%;
+	right: 10px;
+}
+
+.navigation ul{
+	list-style: none;
+}
+
+.navigation ul li{
+	display:inline-block;
+	padding: 10px;
+}
+
+.navigation ul li a, .navigation ul li a:visited{
+	text-decoration: none;
+	color: aliceblue;
+	text-transform: uppercase;
+	font-size: 0.8rem;
+}
+
+.navigation ul li::after{
+	content: '';
+	display: block;
+	width: 0;
+	height: 2px;
+	background-color: goldenrod;
+	margin: auto;
+}
+.navigation ul li:hover::after{
+	width: 100%;
+	transition: 0.5s;
+	cursor: pointer;
+}
+
+/*-----------------------------------------------Main-------------------------------------*/
+main{
+	padding: 40px 40px;
+	grid-area: main;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 30px;
+
+}
+
+main .containter{
+	border-radius: 10px;
+	border: 1px solid rgba(241, 234, 199,0.5);
+	padding: 20px;
+	background-color: rgba(241, 234, 199,0.5);
+	box-shadow: 0 0 7px 0 #000;
+}
+
+main h2{
+	color: #112B3C;
+	font-size: 1rem;
+	margin-bottom: 20px;
+}
+
+main p{
+	font-size: 0.8rem;
+	opacity: 50%;
+}
+
+nav .material-icons{
+	display: none;
+}
+
+/*-----------------------------------------------Media Querry-------------------------------------*/
+
+@media(max-width:700px){
+	.navigation ul li{
+		display: block;
+	}
+
+	nav{
+		position: absolute;
+		top: 0px;
+		right: 0px;
+		
+	}
+
+	.navigation{
+		position: absolute;
+		top: 0;
+		right: -200px;
+		background: #7FB5FF;
+		width: 200px;
+		height: 100vh;
+		z-index: 1;
+	}
+
+	nav .material-icons{
+		display: block;
+		color: white;
+		margin: 10px;
+		font-weight: bold;
+		font-size: 2rem;
+	}
+
+	.navigation ul{
+		padding: 20px 30px;
+	}
+
+	.navigation ul li::after{
+		display: none;
+	}
+
+	.navigation ul li a:hover,.navigation ul li a:focus{
+		color: #000;
+		text-decoration: underline;
+	}
+
+}

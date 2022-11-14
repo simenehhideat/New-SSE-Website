@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Grid Layout</title>
+    <link rel="stylesheet" href="css/styles.css" />
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+  </head>
+  <body>
+    <header class="header">
+      <figure class="logoContainer">
+        <img
+          src="../Background-clip/images/logo.jpg"
+          alt="Logo"
+          width="500"
+          height="500"
+        />
+        <figcaption class="caption">SSE Logo</figcaption>
+      </figure>
+      <h1>SSE IT and Business Solutions</h1>
+    </header>
+    <nav>
+			<div class="navigation" id="navMenu">
+				<span class="material-icons" onclick="hideMenu()">
+					close
+					</span>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Clients</a></li>
+          <li><a href="#">Registration</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+			<span class="material-icons" onclick="showMenu()">
+				menu
+				</span>
+    </nav>
+    <main>
+      <div class="containter">
+        <h2>Web Application Development</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, magnam
+          eos non numquam fugiat velit doloremque officiis distinctio veniam.
+          Illo.
+        </p>
+      </div>
+      <div class="containter">
+        <h2>Mobile Application Development </h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, magnam
+          eos non numquam fugiat velit doloremque officiis distinctio veniam.
+          Illo.
+        </p>
+      </div>
+      <div class="containter">
+        <h2>IT Consultenacy</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, magnam
+          eos non numquam fugiat velit doloremque officiis distinctio veniam.
+          Illo.
+        </p>
+      </div>
+    </main>
+
+		<script>
+			var navMenu = document.getElementById("navMenu");
+
+			function hideMenu(){
+				navMenu.style.right = "-200px";
+			}
+
+			function showMenu(){
+				navMenu.style.right = "0px";
+			}
+
+		</script>
+
+  </body>
+</html>
